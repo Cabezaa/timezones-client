@@ -6,8 +6,8 @@ import Timezones from "./components/timezones/Container";
 function App() {
   return (
     <div className="App">
-      <div className="container">
-        <h1>A list of Timezones</h1>
+      <div className="App-header">
+        <h1>Timezones APP</h1>
       </div>
       <Timezones />
       <footer>

@@ -32,7 +32,7 @@ const Search = ({
         value={selectedValue}
         onChange={(value) => setSelectedValue(value)}
       >
-        <Input.Search size="large" placeholder="Search a timezone" />
+        <Input.Search size="large" placeholder="Enter the name of the zone" />
       </AutoComplete>
     </div>
   );
