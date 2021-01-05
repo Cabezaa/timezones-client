@@ -105,6 +105,11 @@
   margin: 20px;
 }
 
+.empty-data > .description {
+  font-size: 15px;
+  font-weight: 600;
+}
+
 @media (max-width: 768px) {
   .timezone {
     display: flex;

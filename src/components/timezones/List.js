@@ -6,7 +6,12 @@ const List = ({ timezones, onDeleteTimezone }) => {
   if (!timezones || timezones.length === 0)
     return (
       <div className="empty-data">
-        <Empty />
+        <Empty
+          className="description"
+          description={
+            <span>No timezones to show. Add one in the above selector</span>
+          }
+        />
       </div>
     );
 
