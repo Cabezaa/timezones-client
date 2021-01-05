@@ -37,9 +37,24 @@
   }
 }
 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.search-title {
+  font-weight: 600;
+  font-size: 30px;
+  padding: 2px;
+}
 
-.container {
+.search-bar {
+  min-width: 500px;
+}
+
+.list-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -60,24 +75,38 @@
   align-content: center;
   color: rgb(37, 37, 37);
   flex-basis: 30%;
+  background-color: #dddddd;
 }
 
-
-
-.titleTimezone {
+.title-timezone {
   margin: 10px;
 }
 
-.optionButton {
+.content-timezone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+}
+
+.option-button {
   width: 100px;
   align-self: center;
-  margin-bottom: 5px;
+  margin: 5px;
+}
+
+.spinner-timezone {
+  margin: 10px;
+}
+
+.empty-data {
+  margin: 20px;
 }
 
 @media (max-width: 768px) {
   .timezone {
-      display: flex;
-      justify-content: center;
-      flex-basis: 100%;
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
   }
 }

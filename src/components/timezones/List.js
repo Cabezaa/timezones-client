@@ -1,14 +1,23 @@
 import React from "react";
 import Timezone from "./Timezone";
+import { Empty } from "antd";
 
-const List = ({ timezones }) => {
-  //   if (!timezones || timezones.length === 0) return <p>No Timezones, sorry</p>;
+const List = ({ timezones, onDeleteTimezone }) => {
+  if (!timezones || timezones.length === 0)
+    return (
+      <div className="empty-data">
+        <Empty />
+      </div>
+    );
 
-  timezones = [{}, {}, {}, {}, {}];
   return (
-    <div className="container">
+    <div className="list-container">
       {timezones.map((timezone) => (
-        <Timezone key={timezone._id} timezone={timezone} />
+        <Timezone
+          key={timezone._id}
+          timezoneToShow={timezone}
+          onDeleteTimezone={onDeleteTimezone}
+        />
       ))}
     </div>
   );
