@@ -1,5 +1,5 @@
 # Timezones Application
-This is only the APP/Client of the whole project. For it to work it is necessary that the server (Timezones-Server) is running in the port 3005 as default.
+This is only the APP/Client of the whole project. For it to work it is necessary that the server (Timezones-Server) is running in port 3005 as default.
 
 ## Technologies
 This application is created with:
@@ -9,14 +9,13 @@ This application is created with:
 * [Lodash](https://github.com/lodash/lodash): 4.17
 
 ## Setup
-To run this project, install it locally using npm:
+Follow the next steps to run the application in your local enviroment:
 
 ### Prerequisites
 The only thing that you need for run this project, is npm:
 ```
 npm install npm@latest -g
 ```
-
 
 ### Clone the repository
 
