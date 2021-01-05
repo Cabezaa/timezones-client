@@ -80,6 +80,10 @@
 
 .title-timezone {
   margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 5px;
+  word-break: break-word;
 }
 
 .content-timezone {
@@ -90,9 +94,7 @@
 }
 
 .option-button {
-  width: 100px;
-  align-self: center;
-  margin: 5px;
+  margin-left: auto;
 }
 
 .spinner-timezone {
@@ -108,5 +110,8 @@
     display: flex;
     justify-content: center;
     flex-basis: 100%;
+  }
+  .search-bar {
+    min-width: 350px;
   }
 }

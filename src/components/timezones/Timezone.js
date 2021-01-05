@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Spin, notification } from "antd";
-import { DeleteOutlined } from "@ant-design/icons";
+import { CloseOutlined } from "@ant-design/icons";
 
 import getTimezoneByName from "../../api/getTimezoneByName";
 
@@ -30,6 +30,15 @@ const Timezone = ({ timezoneToShow, onDeleteTimezone }) => {
 
   return (
     <div className="timezone">
+      <Button
+        className="option-button"
+        onClick={() => onDeleteTimezone(timezone.name)}
+        danger
+        size="small"
+        type="text"
+      >
+        <CloseOutlined />
+      </Button>
       <span className="title-timezone">{timezone.name}</span>
       {!loading ? (
         <div className="content-timezone">
@@ -41,15 +50,6 @@ const Timezone = ({ timezoneToShow, onDeleteTimezone }) => {
           <Spin />
         </div>
       )}
-
-      <Button
-        className="option-button"
-        onClick={() => onDeleteTimezone(timezone.name)}
-        danger
-      >
-        <DeleteOutlined />
-        Delete
-      </Button>
     </div>
   );
 };
