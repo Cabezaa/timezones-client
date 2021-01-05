@@ -16,6 +16,7 @@ const Container = () => {
   const [loading, setLoading] = useState(false);
   const [timezones, setTimezones] = useState([]);
   const [timezonesToShow, setTimezonesToShow] = useState([]);
+  const [selectedValue, setSelectedValue] = useState(null);
 
   useEffect(() => {
     setLoading(true);
@@ -70,8 +71,10 @@ const Container = () => {
           return timezone.name !== name;
         });
         setTimezonesToShow([...timezonesToShowFiltered, data]);
+        setSelectedValue(null);
       } else {
         //Already showing the timezone
+        setSelectedValue(null);
         notification.warning({
           message: "The timezone that you are selecting it's already displayed"
         });
@@ -86,7 +89,12 @@ const Container = () => {
 
   return (
     <>
-      <Search timezones={timezones} onSelectTimezone={onSelectTimezone} />
+      <Search
+        timezones={timezones}
+        selectedValue={selectedValue}
+        setSelectedValue={setSelectedValue}
+        onSelectTimezone={onSelectTimezone}
+      />
       <Loading isLoading={loading}>
         <List timezones={timezonesToShow} onDeleteTimezone={onDeleteTimezone} />
       </Loading>

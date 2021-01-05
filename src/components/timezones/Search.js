@@ -1,7 +1,12 @@
 import React from "react";
 import { Input, AutoComplete } from "antd";
 
-const Search = ({ timezones, onSelectTimezone }) => {
+const Search = ({
+  timezones,
+  selectedValue,
+  setSelectedValue,
+  onSelectTimezone
+}) => {
   const generateOptions = (timezones) => {
     //To adapt to the format requested by the Autocomplete component of Antd
     const options = timezones.map((timezone) => {
@@ -23,6 +28,9 @@ const Search = ({ timezones, onSelectTimezone }) => {
           option?.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
         }
         onSelect={(value) => onSelectTimezone(value)}
+        defaultValue={selectedValue}
+        value={selectedValue}
+        onChange={(value) => setSelectedValue(value)}
       >
         <Input.Search size="large" placeholder="Search a timezone" />
       </AutoComplete>
