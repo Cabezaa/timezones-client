@@ -4,17 +4,23 @@ import { CloseOutlined } from "@ant-design/icons";
 
 import getTimezoneByName from "../../api/getTimezoneByName";
 
+import useIntervalHook from "../common/useIntervalHook";
+
 const Timezone = ({ timezoneToShow, onDeleteTimezone }) => {
   const [loading, setLoading] = useState(false);
   const [timezone, setTimezone] = useState(timezoneToShow);
+  const [fetchData, setFetchData] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     async function fetchTimezone() {
       try {
-        const { data } = await getTimezoneByName(timezone.name);
-        setTimezone(data);
-        setLoading(false);
+        if (fetchData) {
+          setLoading(true);
+          const { data } = await getTimezoneByName(timezone.name);
+          setTimezone(data);
+          setLoading(false);
+          setFetchData(false);
+        }
       } catch (error) {
         console.error(error);
         notification.error({
@@ -22,11 +28,16 @@ const Timezone = ({ timezoneToShow, onDeleteTimezone }) => {
           description: `An error occurred while trying to get the timezone details of ${timezone.name}`
         });
         setLoading(false);
+        setFetchData(false);
       }
     }
-
+    //Call the async function
     fetchTimezone();
-  }, [timezone.name]);
+  }, [timezone.name, fetchData]);
+
+  useIntervalHook(() => {
+    setFetchData(true); //This will activate the useEffect and fetch the data again
+  }, 5000);
 
   return (
     <div className="timezone">
