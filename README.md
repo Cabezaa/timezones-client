@@ -1,6 +1,11 @@
 # Timezones Application
 This is only the APP/Client of the whole project. For it to work it is necessary that the server (Timezones-Server) is running in port 3005 as default.
 
+# Table of Contents
+1. [Technologies](#technologies)
+2. [Setup](#setup)
+3. [Docker](#docker)
+
 ## Technologies
 This application is created with:
 * ReactJS: 17
