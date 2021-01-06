@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Button, Spin, notification } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
 
+import config from "../../config";
+
 import getTimezoneByName from "../../api/getTimezoneByName";
 
 import useIntervalHook from "../common/useIntervalHook";
@@ -37,7 +39,7 @@ const Timezone = ({ timezoneToShow, onDeleteTimezone }) => {
 
   useIntervalHook(() => {
     setFetchData(true); //This will activate the useEffect and fetch the data again
-  }, 5000);
+  }, config.autoRefreshInterval);
 
   return (
     <div className="timezone">

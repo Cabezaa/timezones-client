@@ -1,8 +1,8 @@
-const { REACT_APP_PORT, REACT_APP_SERVER_URL } = process.env;
+const { REACT_APP_SERVER_URL, REACT_APP_AUTOREFRESH_INTERVAL } = process.env;
 
 const config = {
-  reactPort: REACT_APP_PORT,
-  serverURL: REACT_APP_SERVER_URL
+  serverURL: REACT_APP_SERVER_URL,
+  autoRefreshInterval: REACT_APP_AUTOREFRESH_INTERVAL || 5000
 };
 
 export default config;
