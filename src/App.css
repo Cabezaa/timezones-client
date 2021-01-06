@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .App-header {
@@ -79,6 +82,14 @@
 .empty-data > .description {
   font-size: 15px;
   font-weight: 600;
+}
+
+.body {
+  flex: 1;
+}
+
+.footer {
+  height: 30px;
 }
 
 @media (max-width: 768px) {
