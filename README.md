@@ -48,7 +48,7 @@ yarn start
 
 ## Docker
 
-The application is ready to run in docker containers. Follow the next step to create the image and start the container:
+The application is ready to run in a docker container. Follow the next step to create the image and start the container:
 
 ### Build the image
 
