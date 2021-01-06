@@ -41,8 +41,8 @@ It is not recommended to have the .env file committed in the repository. In this
 
 Information in the ENV:
 ```
-REACT_APP_PORT  ==> The port where the app will run.
 REACT_APP_SERVER_URL ==> The URL to the API endpoint. It's mean, the URL to the timezones-server
+REACT_APP_AUTOREFRESH_INTERVAL  ==> The amount of time in seconds of each autorefresh interval. 5000 (5s) as default.
 ```
 
 ### Start the APP in local

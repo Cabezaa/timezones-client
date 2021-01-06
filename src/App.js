@@ -9,9 +9,11 @@ function App() {
       <div className="App-header">
         <h1>Timezones APP</h1>
       </div>
-      <Timezones />
-      <footer>
-        <div className="footer">Built by Esteban Ruiz de Galarreta - 2021</div>
+      <body className="body">
+        <Timezones />
+      </body>
+      <footer className="footer">
+        Built by Esteban Ruiz de Galarreta - 2021
       </footer>
     </div>
   );
