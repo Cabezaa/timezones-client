@@ -20,7 +20,7 @@ const Container = () => {
 
   useEffect(() => {
     setLoading(true);
-    async function fetchTasks() {
+    async function fetchTimezones() {
       try {
         const { data } = await getTimezones();
 
@@ -41,7 +41,7 @@ const Container = () => {
       }
     }
 
-    fetchTasks();
+    fetchTimezones();
   }, []);
 
   const onDeleteTimezone = async (name) => {
