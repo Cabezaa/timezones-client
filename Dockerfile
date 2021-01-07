@@ -1,10 +1,7 @@
 # pull official base image and set step name
 FROM node:14.15.3-alpine as builder-step
 
-# creating the directory of the app
-RUN mkdir /app
-
-# set working directory
+# creating and set working directory
 WORKDIR /app
 
 # install app dependencies
