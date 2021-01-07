@@ -66,3 +66,5 @@ docker build -t timezones-client:latest .
 ```bash
 docker run --name timezones-client -p 3000:80 -d timezones-client:latest
 ```
+
+After that, The application will be ready to use at: `http://localhost:3000/`
